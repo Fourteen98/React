@@ -1,16 +1,12 @@
 import react from "react";
 
-function Form() {
+function InputField({labelName, type, inputPlaceholder}) {
   return (
-    <div className="form">
-      <div className="input-container">
-        <label htmlFor="email"/>
-        <input type="email" id="email" placeholder="Email" />
-        <label htmlFor="password"/>
-        <input type="password" id="password" placeholder="Password" />
-      </div>
+    <div className="input-container">
+      <label htmlFor={labelName}>{labelName}</label>
+      <input type={type} id="email" placeholder={inputPlaceholder}/>
     </div>
   );
 }
 
-export default Form;
+export default InputField;
